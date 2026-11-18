@@ -2,8 +2,7 @@
 
 {% block content %}
 
-    <div class="d-flex">
-        
+    <div class="d-grid">
         <aside class="sidebar">
             <ul>
                 <li>
@@ -20,13 +19,33 @@
                 </li>
             </ul>
         </aside>
-
         {% block content_title %}
             <div>
                 <h1>Welcome!</h1>
-                <p>This blog is for documenting my learning and things I consider important/helpful. The blog
-                post will be primarily about software and college.</p>
+                <p>Hello! My name is Geordanny. I am a current of Computer Science at <a href="#"> Northern Essex Community College</a>.</p>
+                
+                <p>This blog is for documenting my learning and things I consider important/helpful. The 
+                posts will be primarily about software and my education.</p>
             </div>
         {% endblock %}
+
+        <div class="article-list">
+            <h2>The lastest posts:</h2>
+            {% set recent = articles if not all_articles else all_articles %}
+            {% for article in recent[:3] %}
+                <article>
+                    <header> <h3><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3> </header>
+                    <section>{{ article.summary }}</section>
+                    <footer>
+                        <p>Published: <time datetime="{{ article.date.isoformat() }}"> {{ article.locale_date }} </time></p>
+                    </footer>
+                </article>
+            {% endfor %}
+        </div>
+
+
     </div>
+
+
+
 {% endblock content %}

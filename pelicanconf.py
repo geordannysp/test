@@ -33,10 +33,21 @@ SOCIAL = [
 # This takes the name of the template, then filename/index.html  
 TEMPLATE_PAGES = {
     'about.html' : 'about/index.html',
-    'posts.html' : 'posts/index.html'
+}
+
+DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'posts')
+POSTS_SAVE_AS = 'posts/index.html'
+POSTS_URL = 'posts/'
+
+PAGINATED_TEMPLATES = {
+    'index': None,
+    'tag': None,
+    'category': None,
+    'author': None,
+    'posts': None,
 }
 
 DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
+RELATIVE_URLS = True

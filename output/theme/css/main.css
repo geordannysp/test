@@ -1,10 +1,9 @@
 
-
 /* Global */
 body {
     margin: 1rem;
+    background-color: white-smoke;
 }
-
 main {
     min-height: 80dvh;
 }
@@ -19,7 +18,7 @@ main {
 }
 
 .sidebar > ul {
-    padding: 1rem;
+    padding: 1.9rem 2rem;
     margin: 0;
 }
 
@@ -27,11 +26,20 @@ aside > ul > li {
     padding: 0.2rem;
 }
 
-/* nav */
+main > div {
+    grid-template-columns: 1fr 6fr;
+}
 
+/* nav */
 nav > ul {
     padding: 2rem;
     margin: 0 auto;
+}
+
+/* article section */
+.article-list {
+    max-width: 20rem;
+    grid-column-start: 2;
 }
 
 /* Helper Classes */
@@ -44,9 +52,16 @@ nav > ul {
     justify-content: space-between;
 }
 
+.f-wrap{
+    flex-wrap: wrap;
+}
 .d-flex {
     display: flex;
 }
+.d-grid {
+    display: grid;
+}
+
 
 .gap-2 {
     gap: 2rem;
