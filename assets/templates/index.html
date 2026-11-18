@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="d-flex">
+        
+        <aside class="sidebar">
+            <ul>
+                <li>
+                    <a href="#">Github</a>
+                </li>
+                <li>
+                    <a href="#">Codeberg</a>
+                </li>
+                <li>
+                    <a href="#">Northern Essex Community College</a>
+                </li>
+                <li>
+                    <a href="#">Linkedin</a>
+                </li>
+            </ul>
+        </aside>
+
+        {% block content_title %}
+            <div>
+                <h1>Welcome!</h1>
+                <p>This blog is for documenting my learning and things I consider important/helpful. The blog
+                post will be primarily about software and college.</p>
+            </div>
+        {% endblock %}
+    </div>
+{% endblock content %}

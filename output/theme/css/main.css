@@ -1,0 +1,54 @@
+
+
+/* Global */
+body {
+    margin: 1rem;
+}
+
+main {
+    min-height: 80dvh;
+}
+
+/* side bar */
+
+.sidebar {
+    max-width: 12rem;
+    margin-right: 2rem;
+    padding-top: ;
+    display: inline-block;
+}
+
+.sidebar > ul {
+    padding: 1rem;
+    margin: 0;
+}
+
+aside > ul > li {
+    padding: 0.2rem;
+}
+
+/* nav */
+
+nav > ul {
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+/* Helper Classes */
+
+.d-inlineblock{
+    display: inline-block; 
+}
+
+.jc-space-between {
+    justify-content: space-between;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
