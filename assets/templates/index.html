@@ -6,31 +6,31 @@
         <aside class="sidebar">
             <ul>
                 <li>
-                    <a href="#">Github</a>
+                    <a href="https://github.com/geordannysp/"><img class="icon" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/icons/github.svg" alt="Github Logo" width="20" height="20"><span>Github</span></a>
                 </li>
                 <li>
-                    <a href="#">Codeberg</a>
+                    <a href="https://codeberg.org/Geordanny/"><img class="icon" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/icons/codeberg.svg" alt="Codeberg Logo" width="20" height="20"><span>Codeberg</span></a>
                 </li>
                 <li>
-                    <a href="#">Northern Essex Community College</a>
+                    <a href="https://necc.edu/"><img class="icon" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/icons/school.svg" alt="University Logo" width="20" height="20"><span>NECC</span></a>
                 </li>
                 <li>
-                    <a href="#">Linkedin</a>
+                    <a href="https://www.linkedin.com/in/geoordanny-soto/"><img class="icon" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/icons/linkedin.svg" alt="Linkedin Logo" width="20" height="20"><span>Linkedin</span></a>
                 </li>
             </ul>
         </aside>
         {% block content_title %}
             <div>
                 <h1>Welcome!</h1>
-                <p>Hello! My name is Geordanny. I am a current of Computer Science at <a href="#"> Northern Essex Community College</a>.</p>
-                
-                <p>This blog is for documenting my learning and things I consider important/helpful. The 
+                <p>Hello! My name is Geordanny. I am a current student of Computer Science at <a target="_blank" href="https://necc.edu/">Northern Essex Community College</a>.</p>
+
+                <p>This blog is for documenting my learning and things I consider important/helpful. The
                 posts will be primarily about software and my education.</p>
             </div>
         {% endblock %}
 
         <div class="article-list">
-            <h2>The lastest posts:</h2>
+            <h2>The latest posts:</h2>
             {% set recent = articles if not all_articles else all_articles %}
             {% for article in recent[:3] %}
                 <article>
@@ -42,7 +42,6 @@
                 </article>
             {% endfor %}
         </div>
-
 
     </div>
 

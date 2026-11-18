@@ -1,7 +1,7 @@
-AUTHOR = 'Geordanny'
+AUTHOR   = 'Geordanny'
 SITENAME = "Geordanny's Blog"
-SITEURL = ""
-THEME = "./assets"
+SITEURL  = ""
+THEME    = "./assets"
 
 PATH = "content"
 
@@ -10,18 +10,17 @@ TIMEZONE = 'America/New_York'
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+FEED_ALL_ATOM         = None
+CATEGORY_FEED_ATOM    = None
 TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
+AUTHOR_FEED_ATOM      = None
+AUTHOR_FEED_RSS       = None
 
 # Blogroll
 LINKS = [
     ("Pelican", "https://getpelican.com/"),
     ("Python.org", "https://www.python.org/"),
     ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
 ]
 
 # Social widget
@@ -40,11 +39,11 @@ POSTS_SAVE_AS = 'posts/index.html'
 POSTS_URL = 'posts/'
 
 PAGINATED_TEMPLATES = {
-    'index': None,
-    'tag': None,
-    'category': None,
-    'author': None,
-    'posts': None,
+    'index'    : None,
+    'tag'      : None,
+    'category' : None,
+    'author'   : None,
+    'posts'    : None,
 }
 
 DEFAULT_PAGINATION = 5
