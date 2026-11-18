@@ -18,7 +18,7 @@
             {% if FEED_ALL_ATOM %}
                 <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Full Atom Feed" />
             {% endif %}
-            {% if FEED_ALL_RSS %}
+            {%if FEED_ALL_RSS %}
                 <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Full RSS Feed" />
             {% endif %}
             {% if FEED_ATOM %}
@@ -45,7 +45,6 @@
     <body>
         {% block body %}
             <header class="d-flex jc-space-between">
-                {% block header %}
                     <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
                     {% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}
                     <nav>
@@ -55,8 +54,7 @@
                             <li> <a href="/about">About</a> </li>
                         </ul>
                     </nav>
-                {% endblock header %}
-            </heaer>
+            </header>
             <main>
                 {% block content %}
                 {% endblock content %}
