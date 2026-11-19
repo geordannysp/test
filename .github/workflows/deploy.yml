@@ -2,7 +2,7 @@ name: Deploy blog to GitHub Pages
 
 on:
   push:
-    branches: [main]      # change to master if that's your branch
+    branches: [master]      # change to master if that's your branch
   workflow_dispatch:
 
 permissions:
