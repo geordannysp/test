@@ -206,11 +206,7 @@ aside + div {
 
 /* ---------- Articles ---------- */
 article {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1rem 1.25rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
 article h2,
