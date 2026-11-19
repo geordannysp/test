@@ -29,9 +29,22 @@
     --link-hover: #2c5d85;
     --link-visited: purple;
     --radius: 0.5rem;
-    --content-width: 70rem;
+    --content-width: 90rem;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        --bg: #1a1816;
+        --surface: #252220;
+        --text: #ece8e3;
+        --muted: #a8a19a;
+        --border: #3a3631;
+        --link: #7db7e8;
+        --link-hover: #a6cff0;
+        --link-visited: #c9a0dc;
+    }
+}
 /* ---------- Global ---------- */
 *,
 *::before,
@@ -46,7 +59,7 @@ body {
     background-color: var(--bg);
     color: var(--text);
     font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
 }
 
@@ -90,6 +103,8 @@ a:focus-visible {
 
 /* ---------- Header / nav ---------- */
 body > header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border);
@@ -109,6 +124,8 @@ body > header h1 a:visited {
 }
 
 nav > ul {
+    display: flex;
+    gap: 2rem;
     padding: 0;
     margin: 0;
 }
@@ -119,13 +136,18 @@ nav a:visited {
     text-decoration: none;
 }
 
+nav a:visited {
+    color: var(--link);
+}
+
 nav a:hover {
     text-decoration: underline;
 }
 
 /* ---------- Home page layout ---------- */
 /* container: sidebar | content */
-main > div {
+.home {
+    display: grid;
     grid-template-columns: 12rem 1fr;
     column-gap: 2rem;
     align-items: start;
@@ -159,6 +181,13 @@ main > div {
 }
 
 /* Icons */
+.sidebar-logo img {
+    display: block;
+    width: 100%;
+    max-width: 8rem;
+    height: auto;
+}
+
 .icon {
     width: 1.25rem;
     height: 1.25rem;
@@ -179,7 +208,6 @@ aside + div {
 
 .article-list {
     grid-column: 2;
-    max-width: none;
 }
 
 /* ---------- Articles ---------- */
@@ -202,7 +230,6 @@ article footer p {
     font-size: 0.875rem;
 }
 
-
 address {
     font-style: normal;
 }
@@ -224,7 +251,7 @@ body > footer {
         gap: 0.5rem;
     }
 
-    main > div {
+    .home {
         grid-template-columns: 1fr;
     }
 
@@ -240,29 +267,4 @@ body > footer {
         flex-wrap: wrap;
         gap: 0.5rem 1.5rem;
     }
-}
-
-/* ---------- Helper classes ---------- */
-.d-inlineblock {
-    display: inline-block;
-}
-
-.jc-space-between {
-    justify-content: space-between;
-}
-
-.f-wrap {
-    flex-wrap: wrap;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.d-grid {
-    display: grid;
-}
-
-.gap-2 {
-    gap: 2rem;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+<html  lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
     <head>
         {% block head %}
             <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
@@ -39,6 +39,7 @@
             {% if TAG_FEED_RSS and tag %}
                 <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ tag.slug.title() }} Tag RSS Feed" />
             {% endif %}
+        <meta name="color-scheme" content="light dark">
         {% endblock head %}
     </head>
 
@@ -51,7 +52,7 @@
                         <ul class="d-flex gap-2">
                             <li><a href="/posts">blog posts</a></li>
                             <li><a target="_blank" href="https://docs.google.com/document/d/1LwNcCE0Ygxjxt0-MGa4jatbW3rFdNY38/edit">resume</a></li>
-                            <li> <a href="/about">About</a> </li>
+                            <li> <a href="/about">about</a> </li>
                         </ul>
                     </nav>
             </header>
